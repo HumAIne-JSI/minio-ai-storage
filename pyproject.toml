@@ -1,0 +1,10 @@
+[project]
+name = "minio_humaine_client"
+version = "0.1.0"
+description = "Python client for HUMAINE MinIO API"
+dependencies = ["requests"]
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
