@@ -1,13 +1,24 @@
 import pytest
 from minio_humaine_client.data import upload_data, download_data
 from minio_humaine_client.auth import HumaineAuth
-from minio_humaine_client.config import DEFAULT_BASE_URL
 
 from unittest.mock import patch, mock_open
 
+import os
+from dotenv import load_dotenv
+from pathlib import Path
+
+env_path = Path(__file__).resolve().parent / ".env"
+load_dotenv(dotenv_path=env_path)
+
+HUMAINE_API_BASE_URL = os.getenv("HUMAINE_API_BASE_URL", "http://localhost:8000")
+HUMAINE_API_TIMEOUT = int(os.getenv("HUMAINE_TIMEOUT", 30))
+HUMAINE_API_USERNAME = os.getenv("HUMAINE_API_USERNAME", "user")
+HUMAINE_API_PASSWORD = os.getenv("HUMAINE_API_PASSWORD", "pass")
+
 @pytest.fixture
 def mock_auth():
-    auth = HumaineAuth(DEFAULT_BASE_URL)
+    auth = HumaineAuth(HUMAINE_API_BASE_URL)
     auth.token = "fake-token"
     return auth
 
