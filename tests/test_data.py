@@ -1,7 +1,7 @@
 import pytest
-from humaine_client.data import upload_data, download_data
-from humaine_client.auth import HumaineAuth
-from humaine_client.config import DEFAULT_BASE_URL
+from minio_humaine_client.data import upload_data, download_data
+from minio_humaine_client.auth import HumaineAuth
+from minio_humaine_client.config import DEFAULT_BASE_URL
 
 from unittest.mock import patch, mock_open
 
