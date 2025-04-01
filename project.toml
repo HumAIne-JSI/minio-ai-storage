@@ -1,0 +1,9 @@
+[project]
+name = "minio-ai-storage"
+version = "0.1.0"
+description = "Python client for HUMAINE MinIO API"
+dependencies = [
+    "requests"
+]
+[tool.setuptools.packages.find]
+where = ["humaine_client"]
