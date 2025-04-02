@@ -70,6 +70,16 @@ def main():
     response = auth.upload_object(object_name, filepath)
     print("✅ File uploaded successfully.")
 
+    # update metadata
+    print("🏷️  Updating metadata for the uploaded object...")
+    metadata = {
+        "description": "Random Forest model for Iris dataset",
+        "version": "1.0",
+        "author": "Klemen Kenda",
+    }
+    response = auth.update_metadata(object_name, metadata)
+    print("✅ Metadata updated successfully.")
+
 
 if __name__ == "__main__":
     main()
