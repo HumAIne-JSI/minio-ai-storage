@@ -90,5 +90,6 @@ def main():
         print(f"  - {key}: {value}")
     print()
 
+
 if __name__ == "__main__":
     main()
