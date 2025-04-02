@@ -58,3 +58,12 @@ class HumaineAuth:
             response = requests.post(url, headers=self.headers(), files=files)
         response.raise_for_status()
         return response.json()
+
+    def update_metadata(self, object_name, metadata):
+        if not self.bucket_name:
+            raise ValueError("No bucket selected.")
+        url = f"{self.base_url}/main_ops/metadata/{self.bucket_name}/{object_name}"
+        response = requests.patch(url, headers=self.headers(), json=metadata)
+        response.raise_for_status()
+        return response.json()
+

@@ -67,8 +67,6 @@ def main():
 
     object_name = "test_random_forest.pkl"
     filepath = "tmp/test_random_forest.pkl"
-    with open(filepath, "w") as f:
-        f.write("This is a test file.")
     response = auth.upload_object(object_name, filepath)
     print("✅ File uploaded successfully.")
 
