@@ -2,7 +2,7 @@
 
 ## Data Structures
 
-### 🧠 Active Learning Model Metadata
+### 🔄 Active Learning Model Metadata
 
 | Field | Type | Description |
 |-------|------|-------------|
@@ -40,7 +40,7 @@
 
 
 
-### 🧠🔗 Neurosymbolic Learning Model Metadata
+### 🧠 Neurosymbolic Learning Model Metadata
 
 | Field | Type | Description |
 |-------|------|-------------|
