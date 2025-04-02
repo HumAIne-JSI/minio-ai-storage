@@ -84,10 +84,11 @@ def main():
     print("📄 Fetching metadata for the uploaded object...")
     response = auth.get_metadata(object_name)
     print("✅ Metadata fetched successfully.")
-    print("Metadata:")
-    pprint(response)
+    print("Custom metadata:")
+    custom_metadata = response["metadata"]["custom_metadata"]
+    for key, value in custom_metadata.items():
+        print(f"  - {key}: {value}")
     print()
-
 
 if __name__ == "__main__":
     main()
