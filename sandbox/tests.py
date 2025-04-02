@@ -80,6 +80,14 @@ def main():
     response = auth.update_metadata(object_name, metadata)
     print("✅ Metadata updated successfully.")
 
+    # get metadata
+    print("📄 Fetching metadata for the uploaded object...")
+    response = auth.get_metadata(object_name)
+    print("✅ Metadata fetched successfully.")
+    print("Metadata:")
+    pprint(response)
+    print()
+
 
 if __name__ == "__main__":
     main()

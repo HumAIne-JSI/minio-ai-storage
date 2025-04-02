@@ -67,3 +67,11 @@ class HumaineAuth:
         response.raise_for_status()
         return response.json()
 
+    def get_metadata(self, object_name):
+        if not self.bucket_name:
+            raise ValueError("No bucket selected.")
+        url = f"{self.base_url}/main_ops/metadata/{self.bucket_name}/{object_name}"
+        response = requests.get(url, headers=self.headers())
+        response.raise_for_status()
+        return response.json()
+
