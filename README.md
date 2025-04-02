@@ -2,7 +2,7 @@
 
 ## Data Structures
 
-### 🧠 Active Learning
+### 🧠 Active Learning Model Metadata
 
 | Field | Type | Description |
 |-------|------|-------------|
@@ -22,7 +22,7 @@
 | `version_control` *(optional)* | `string` | Git hashes or version identifiers for datasets, models, and code. |
 | `experiment_parameters` | `[string]` | Unique IDs or names for each experiment run. |
 
-### 🐝 Swarm Learning Data Structure
+### 🐝 Swarm Learning Model Metadata
 
 | Field | Type | Description |
 |-------|------|-------------|
@@ -40,7 +40,7 @@
 
 
 
-### 🧠🔗 Neurosymbolic Learning Data Structure
+### 🧠🔗 Neurosymbolic Learning Model Metadata
 
 | Field | Type | Description |
 |-------|------|-------------|
